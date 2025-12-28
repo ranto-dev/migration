@@ -35,7 +35,7 @@
 
 ## 2. Exportation de la base de donnée oracle en CSV
 
-On a choisi d'utiliser une base de donnée d'un projet d'[E-cmomerce](./scripts/ecommerce_db.sql). Dans cette base de donnée, on peut touver 5 (cinq) tables
+On a choisi d'utiliser une base de donnée d'un projet d'[E-cmomerce](./oracle_db/scripts/ecommerce_db.sql). Dans cette base de donnée, on peut touver 5 (cinq) tables
 
 - `client`: qui stocke les informations des clients dans l'application
 - `produits`: stocke tous les produits disponible, à exposer sur le plateforme
@@ -51,4 +51,22 @@ docker exec -it oracle_xe ls -l /scripts
 
 # contruire la base de données en executant le scripts SQL associé
 docker exec -it oracle_xe sqlplus system/PASS@XEDB1 @/scripts/ecommerce_db.sql
+```
+
+Pour l'exportation en CSV, la plus sùr et plus courrant est d'utiliser une [script SQL](./oracle_db/scripts/export_all.sql).
+
+```bash
+docker exec -it oracle_xe sqlplus system/PASS@XEDB1 @script/export_all.sql
+```
+
+une fois l'execution réussi, on se retrouve avec des fichier `csv` bien propre. Pour les exploiter en migrant les données dans mongoDB, on doit d'abord copier ces fichier `cvs` dans une répertoire sur notre servier parcequ'actuellement, ils sont dans le container docker.
+
+```bash
+# création d'une repertoire
+mkdir ~/TP-Migration/exports
+
+# copier les fichiers csv
+docker exec -it oracle_xe mkdir exports
+docker exec -it oracle_xe mv *.csv ./exports
+docker cp oracle_xe:/opt/oracle/exports ~/TP-Migration/
 ```
