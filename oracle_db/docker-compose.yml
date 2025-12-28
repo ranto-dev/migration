@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  oracle-xe:
+    container_name: oracle_xe
+    image: gvenzl/oracle-xe
+    environment:
+      - ORACLE_PASSWORD=rantoinfo
+    ports:
+      - 1521:1521
+    volumes:
+      - ~/TP-Migration/scripts:/scripts
