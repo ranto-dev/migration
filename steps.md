@@ -115,6 +115,12 @@ sudo docker cp expots/paiements.csv mongodb:/tmp/
 sudo docker cp expots/produits.csv mongodb:/tmp/
 ```
 
+ou copier les fichier d'un coup
+
+```bash
+docker cp exports/. mongodb:/tmp/
+```
+
 ### etape 3: importer les donnes dans mongodb
 
 pour cela, il nous suffit d'executer les commandes suivantes:
@@ -129,6 +135,16 @@ ls tmp/
 # on migre la base
 mongoimport   --db migration_tp   --collection clients   --type csv   --headerline   --file /tmp/clients.csv
 mongoimport   --db migration_tp   --collection paiements   --type csv   --headerline   --file /tmp/paiements.csv
+```
+
+ou avec le script shell `import_mongo.sh` qui nous permet d'automatiser les importations
+
+```bash
+# rendre le script executable
+chmod +x import_mongo.sh
+
+# lancer le script
+./import_mongo.sh
 ```
 
 ### etape 4: Vérifier que l’import a réussi

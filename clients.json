@@ -1,0 +1,110 @@
+[
+    {
+        "null": [
+            " ID_CLIENT",
+            "NOM                                               ",
+            "PRENOM                                            ",
+            "EMAIL                                                                                               ",
+            "TELEPHONE"
+        ]
+    },
+    {
+        "null": [
+            "----------",
+            "--------------------------------------------------",
+            "--------------------------------------------------",
+            "----------------------------------------------------------------------------------------------------",
+            "--------------------"
+        ]
+    },
+    {
+        "null": [
+            "         1",
+            "Rakoto                                            ",
+            "Jean                                              ",
+            "jean@example.com                                                                                    ",
+            "0340102030"
+        ]
+    },
+    {
+        "null": [
+            "         2",
+            "Randria                                           ",
+            "Paul                                              ",
+            "paul@example.com                                                                                    ",
+            "0340203040"
+        ]
+    },
+    {
+        "null": [
+            "         3",
+            "Rasoana                                           ",
+            "Marie                                             ",
+            "marie@example.com                                                                                   ",
+            "0340304050"
+        ]
+    },
+    {
+        "null": [
+            "         4",
+            "Rakoton                                           ",
+            "Lina                                              ",
+            "lina@example.com                                                                                    ",
+            "0340405060"
+        ]
+    },
+    {
+        "null": [
+            "         5",
+            "Andry                                             ",
+            "Kevin                                             ",
+            "kevin@example.com                                                                                   ",
+            "0340506070"
+        ]
+    },
+    {
+        "null": [
+            "         6",
+            "Fetra                                             ",
+            "Hary                                              ",
+            "hary@example.com                                                                                    ",
+            "0340607080"
+        ]
+    },
+    {
+        "null": [
+            "         7",
+            "Tiana                                             ",
+            "Sarah                                             ",
+            "sarah@example.com                                                                                   ",
+            "0340708090"
+        ]
+    },
+    {
+        "null": [
+            "         8",
+            "Mamy                                              ",
+            "Luc                                               ",
+            "luc@example.com                                                                                     ",
+            "0340809010"
+        ]
+    },
+    {
+        "null": [
+            "         9",
+            "Haja                                              ",
+            "Nina                                              ",
+            "nina@example.com                                                                                    ",
+            "0340910120"
+        ]
+    },
+    {
+        "null": [
+            "        10",
+            "Koto                                              ",
+            "Mickael                                           ",
+            "mickael@example.com                                                                                 ",
+            "0341011120"
+        ]
+    }
+]
