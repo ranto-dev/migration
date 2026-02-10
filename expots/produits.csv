@@ -1,0 +1,13 @@
+
+ID_PRODUIT,NOM_PRODUIT                                                                                         ,      PRIX,CATEGORIE
+----------,----------------------------------------------------------------------------------------------------,----------,--------------------------------------------------
+         1,Laptop Lenovo                                                                                       ,      1200,Informatique
+         2,Smartphone Samsung                                                                                  ,       900,Téléphone
+         3,Clavier mécanique                                                                                   ,        80,Accessoires
+         4,Souris Logitech                                                                                     ,        45,Accessoires
+         5,TV LG 50"                                                                                           ,      1500,Électronique
+         6,Casque Sony                                                                                         ,       180,Audio
+         7,Chargeur USB-C                                                                                      ,        25,Accessoires
+         8,Routeur TP-Link                                                                                     ,        60,Réseau
+         9,Imprimante HP                                                                                       ,       220,Bureau
+        10,Lampe LED                                                                                           ,        15,Maison

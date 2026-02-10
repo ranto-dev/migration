@@ -1,0 +1,13 @@
+
+ID_PAIEMENT,ID_COMMANDE,   MONTANT,MODE_PAIEMENT                                     ,DATE_PAIEMENT
+-----------,-----------,----------,--------------------------------------------------,------------------
+          1,          1,      1200,VISA                                              ,08-DEC-25
+          2,          2,       900,VISA                                              ,11-DEC-25
+          3,          3,        80,Orange Money                                      ,13-DEC-25
+          4,          4,        45,Airtel Money                                      ,15-DEC-25
+          5,          5,      1500,Virement                                          ,18-DEC-25
+          6,          6,       180,Orange Money                                      ,21-DEC-25
+          7,          7,        25,Airtel Money                                      ,23-DEC-25
+          8,          8,        60,VISA                                              ,25-DEC-25
+          9,          9,       220,Virement                                          ,28-DEC-25
+         10,         10,        15,Espèces                                           ,30-DEC-25

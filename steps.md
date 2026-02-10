@@ -70,3 +70,11 @@ docker exec -it oracle_xe mkdir exports
 docker exec -it oracle_xe mv *.csv ./exports
 docker cp oracle_xe:/opt/oracle/exports ~/TP-Migration/
 ```
+
+## 3. Copier les fichier csv depuis le server distant
+
+Pour le faire, il nous suffit d'executer la ligne de commande suivante
+
+```bash
+scp user@SERVER_DISTANT_IP:~/TP-Migration ~/TP-Migration
+```

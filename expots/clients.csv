@@ -1,0 +1,13 @@
+
+ ID_CLIENT,NOM                                               ,PRENOM                                            ,EMAIL                                                                                               ,TELEPHONE
+----------,--------------------------------------------------,--------------------------------------------------,----------------------------------------------------------------------------------------------------,--------------------
+         1,Rakoto                                            ,Jean                                              ,jean@example.com                                                                                    ,0340102030
+         2,Randria                                           ,Paul                                              ,paul@example.com                                                                                    ,0340203040
+         3,Rasoana                                           ,Marie                                             ,marie@example.com                                                                                   ,0340304050
+         4,Rakoton                                           ,Lina                                              ,lina@example.com                                                                                    ,0340405060
+         5,Andry                                             ,Kevin                                             ,kevin@example.com                                                                                   ,0340506070
+         6,Fetra                                             ,Hary                                              ,hary@example.com                                                                                    ,0340607080
+         7,Tiana                                             ,Sarah                                             ,sarah@example.com                                                                                   ,0340708090
+         8,Mamy                                              ,Luc                                               ,luc@example.com                                                                                     ,0340809010
+         9,Haja                                              ,Nina                                              ,nina@example.com                                                                                    ,0340910120
+        10,Koto                                              ,Mickael                                           ,mickael@example.com                                                                                 ,0341011120
