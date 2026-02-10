@@ -78,3 +78,70 @@ Pour le faire, il nous suffit d'executer la ligne de commande suivante
 ```bash
 scp user@SERVER_DISTANT_IP:~/TP-Migration ~/TP-Migration
 ```
+
+## 3. Migratiom des doonees dans mongodb
+
+### etape 1: Lancer le container Docker mongodb
+
+on se place dans le repertoire se trouvant `docker-compose.yml` de mongodb et executer la ligne de commande suivante:
+
+```bash
+# lancer une instance de mongodb dans un container docker
+sudo docker compose up -d
+
+# verifier si le container est run
+sudo docker ps
+```
+
+si on prefere simple, on peux se passer de docker compose et se contenter seulement de lancer la commande suivante pour lancer une instance de mongodb dans un container docker
+
+```bash
+docker run -d \
+  --name mongodb \
+  -p 27017:27017 \
+  -v ~/mongo_data:/data/db \
+  mongo:latest
+```
+
+### etape 2: Copier les fichiers csv dans le container Docker
+
+ensuite on copie les csv dans le repertoire `tmp` du container docker
+
+```bash
+sudo docker cp expots/clients.csv mongodb:/tmp/
+sudo docker cp expots/commandes.csv mongodb:/tmp/
+sudo docker cp expots/details_commandes.csv mongodb:/tmp/
+sudo docker cp expots/paiements.csv mongodb:/tmp/
+sudo docker cp expots/produits.csv mongodb:/tmp/
+```
+
+### etape 3: importer les donnes dans mongodb
+
+pour cela, il nous suffit d'executer les commandes suivantes:
+
+```bash
+# acceder au bash du container
+sudo docker exec -it mongodb bash
+
+# on peut verifier si les fichiers csv sont tous present dans tmp
+ls tmp/
+
+# on migre la base
+mongoimport   --db migration_tp   --collection clients   --type csv   --headerline   --file /tmp/clients.csv
+mongoimport   --db migration_tp   --collection paiements   --type csv   --headerline   --file /tmp/paiements.csv
+```
+
+### etape 4: Vérifier que l’import a réussi
+
+```bash
+docker exec -it mongodb mongosh
+```
+
+Puis :
+
+```js
+use migration_tp
+show collections
+db.clients.find().limit(5).pretty()
+db.paiements.find().limit(5).pretty()
+```
