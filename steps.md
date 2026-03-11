@@ -1,10 +1,11 @@
-# Les étapes à suivre
+# Les étapes à suivre pour ce projet de migration
 
 ## 1. Préparation et vérifications
 
-1. Verifier si on a accès SSH depuis depuis notre PC vers notre server distant
+1. Verifier si on a accès SSH depuis notre PC vers notre server distant
 
    ```bash
+   # tester la connection ssh
    ssh user@SERVER_DISTANT_IP
    ```
 
